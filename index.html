@@ -211,11 +211,21 @@
               document.body.classList.add("fullscreen");
               showWelcomeDiv();
               showSupportText();
+              // Hide modal if it's visible when entering fullscreen
+              closeModal();
             }
           });
 
           document.addEventListener("fullscreenchange", function () {
-            isFullscreen = !isFullscreen;
+            if (document.fullscreenElement) {
+              // We entered fullscreen mode
+              isFullscreen = true;
+              // Hide modal if it's visible when entering fullscreen
+              closeModal();
+            } else {
+              // We exited fullscreen mode
+              isFullscreen = false;
+            }
           });
         }
 
